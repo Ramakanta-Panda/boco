@@ -1,13 +1,12 @@
 import React from 'react'
 import styles from "./Home.module.css";
-import heroImg from "../../assets/Hero.png";
-import heroMob from "../../assets/HeroMob.png"
+import heroImg from '../../assets/Hero.png';
+import heroMob from '../../assets/HeroMob.png';
 import AuditButton from '../../components/UI/AuditBtn/AuditBtn';
 import TalkButton from '../../components/UI/TalkBtn/TalkBtn';
-import { FaStar } from "react-icons/fa";
 import { brands, carouselImages } from "../../data";
 import Carousel from '../../components/Carousel/Carousel';
-import Card from '../../components/Card/Card ';
+import Card from '../../components/Card/Card';
 import FashionHealth from '../../components/FashionHealth/FashionHealth';
 import Marquee from '../../components/Marquee/Marquee';
 import BrandSection from '../../components/Brandapi/BrandSection';
