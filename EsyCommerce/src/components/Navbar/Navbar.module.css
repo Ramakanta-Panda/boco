@@ -1,0 +1,118 @@
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 5rem;
+            background: #fff;
+            position: relative;
+            z-index: 100;
+        }
+
+        /* LOGO */
+        .logo {
+            font-weight: 800;
+            font-size: 2.2rem;
+            color: #060237;
+        }
+
+        /* MENU LINKS (desktop) */
+        .centerMenu {
+            display: flex;
+            align-items: center;
+            border: 1px solid #d3c3f8;
+            border-radius: 30px;
+            padding: 8px 8px;
+            list-style: none;
+        }
+
+        .link {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #060237;
+            padding: 8px 28px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .active {
+            background-color: #f6f3ff;
+            border-radius: 30px;
+        }
+
+        /* MENU ICON (hidden on desktop) */
+        .menuIcon {
+            display: none;
+            cursor: pointer;
+            color: #0a0033;
+            margin-bottom: 0;
+        }
+
+        /* -------------------------- */
+        /* MOBILE MENU (dropdown) */
+        /* -------------------------- */
+        .mobileMenu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            padding: 20px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .mobileMenu.show {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+            animation: dropdown 0.3s ease forwards;
+        }
+
+        /* Smooth dropdown animation */
+        @keyframes dropdown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* -------------------------- */
+        /* RESPONSIVE DESIGN */
+        /* -------------------------- */
+
+        /* Tablet & mobile */
+        @media (max-width: 992px) {
+
+
+            .menuIcon {
+                display: block;
+                z-index: 101;
+            }
+            .centerMenu {
+                display: none;
+            }
+        }
+
+        /* Mobile: hide talk button */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: .5rem 1rem;
+            }
+
+            .menuIcon {
+                left: 12px;
+                font-size: 26px;
+            }
+
+        }

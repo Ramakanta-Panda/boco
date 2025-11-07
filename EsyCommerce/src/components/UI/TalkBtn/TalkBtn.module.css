@@ -1,0 +1,102 @@
+.talkBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #060237;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 48px;
+  padding: 4px 8px 4px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 10px;
+  border: none;
+}
+
+.text {
+  margin-left: 6px;
+}
+
+.iconCircle {
+  background: #fff;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.icon {
+  color: #0a0033;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+/* === Navbar Responsive Behavior === */
+@media (max-width: 992px) {
+  .talkBtn:not(.heroVariant) {
+    width: 46px;
+    height: 46px;
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+  }
+
+  .talkBtn:not(.heroVariant) .text {
+    display: none;
+  }
+
+  .talkBtn:not(.heroVariant) .iconCircle {
+    background: #060237;
+    width: 46px;
+    height: 46px;
+  }
+
+  .talkBtn:not(.heroVariant) .icon {
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+/* === HERO VARIANT (same on all screens) === */
+.heroVariant {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #060237;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 48px;
+  padding: 4px 8px 4px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 10px;
+  border: none;
+}
+
+.heroVariant.text {
+  margin-left: 6px;
+}
+
+.heroVariant .iconCircle {
+  background: #fff;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.heroVariant .icon {
+  color: #0a0033;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+/* No media query overrides — same style across all screens */

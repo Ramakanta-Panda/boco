@@ -1,0 +1,46 @@
+.auditBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #0a0033;
+    border: 1px solid #060237;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 48px;
+    padding: 14px 24px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.iconCircle {
+    background: #140152;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.icon {
+    color: #fff;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width:768px) {
+    .auditBtn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px 8px 4px 24px;
+    }
+    
+    .iconCircle{
+        display: flex;
+    }
+}
