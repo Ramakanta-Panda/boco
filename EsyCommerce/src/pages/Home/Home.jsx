@@ -1,15 +1,15 @@
 import React from 'react'
 import styles from "./Home.module.css";
-import heroImg from '../../assets/Hero.png';
-import heroMob from '../../assets/heroMob.png';
+import heroImg from "../../assets/Hero.png";
+import heroMob from "../../assets/HeroMob.png"
 import AuditButton from '../../components/UI/AuditBtn/AuditBtn';
 import TalkButton from '../../components/UI/TalkBtn/TalkBtn';
-import { carouselImages } from "../../data";
+import { FaStar } from "react-icons/fa";
+import { brands, carouselImages } from "../../data";
 import Carousel from '../../components/Carousel/Carousel';
-import Card from "../../components/Card/Card"
+import Card from '../../components/Card/Card';
 import FashionHealth from '../../components/FashionHealth/FashionHealth';
 import Marquee from '../../components/Marquee/Marquee';
-import BrandSection from '../../components/Brandapi/BrandSection';
 
 const Home = () => {
 
@@ -58,8 +58,34 @@ const Home = () => {
             </section>
 
             {/* Brand Section */}
+            <section className={styles.brandSection}>
+                <div className={styles.brandHeaderWrapper}>
+                    <div className={styles.Leftline}></div>
 
-            <BrandSection />
+                    <div className={styles.brandHeader}>
+                        <div className={styles.stars}>
+                            {[...Array(5)].map((_, i) => (
+                                <FaStar key={i} />
+                            ))}
+                        </div>
+                        <span>90+ Brands & Counting</span>
+                    </div>
+
+                    <div className={styles.Rightline}></div>
+                </div>
+
+                <div className={styles.slider}>
+                    <div className={styles.slideTrack}>
+                        {[...brands, ...brands].map((logo, i) => (
+                            <div className={styles.slide} key={i}>
+                                <img src={logo} alt={`Brand ${i}`} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* <BrandSection /> */}
 
             {/* ✅ Carousel Section */}
             <Carousel

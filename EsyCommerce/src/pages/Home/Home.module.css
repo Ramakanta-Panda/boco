@@ -81,6 +81,98 @@
     max-width: 500px;
 }
 
+/* ===== Brand Section ===== */
+.brandSection {
+    padding: 1.5rem 0;
+    background: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* --- Header Wrapper --- */
+.brandHeaderWrapper {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    gap: 10px;
+    background-color: var(--white-techd2c, #fff);
+}
+
+.Leftline {
+    flex: 1;
+    height: 1px;
+    background: #d3c3f8;
+    max-width: 100px;
+}
+
+.Rightline {
+    flex: 1;
+    height: 1px;
+    background: #d3c3f8;
+}
+
+/* --- Header (Stars + Text) --- */
+.brandHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: #060237;
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.stars {
+    display: flex;
+    color: #f8d440;
+    font-size: 1rem;
+}
+
+/* --- Slider Container --- */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 2.25rem 0;
+    mix-blend-mode: darken;
+}
+
+/* --- Slide Track (auto-scroll) --- */
+.slideTrack {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    animation: scroll 25s linear infinite;
+    width: max-content;
+}
+
+/* --- Each Slide --- */
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.slide img {
+    width: 180px;
+    height: auto;
+    opacity: 1;
+    transition: transform 0.3s ease;
+}
+
+/* --- Animation --- */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 
 /* Service Card section */
 .section {
@@ -195,6 +287,19 @@
         justify-content: start;
     }
 
+    .slideTrack {
+        gap: 1.5rem;
+        animation-duration: 35s;
+    }
+
+    .slide img {
+        width: 120px;
+    }
+
+    .brandHeader {
+        font-size: 0.95rem;
+    }
+
 }
 
 /* ==== Mobile (≤768px) ==== */
@@ -296,5 +401,21 @@
         100% {
             transform: translateX(-100%);
         }
+    }
+
+    .slide img {
+        width: 165px;
+    }
+
+    .brandHeader {
+        font-size: 0.85rem;
+    }
+
+    .stars {
+        font-size: 0.85rem;
+    }
+
+    .slider {
+        padding: 1rem 0;
     }
 }
