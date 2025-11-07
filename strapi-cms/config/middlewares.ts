@@ -1,18 +1,31 @@
 export default [
   'strapi::errors',
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': ["'self'", 'data:', 'blob:', 'https://*'],
+          'media-src': ["'self'", 'data:', 'blob:', 'https://*'],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
-      headers: '*',
       origin: [
         'http://localhost:5173',
         'http://localhost:3000',
         'https://boco-strapi-cms.onrender.com',
         'https://your-frontend-app.vercel.app'
-      ]
-    }
+      ],
+      headers: ['*'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    },
   },
   'strapi::poweredBy',
   'strapi::logger',
