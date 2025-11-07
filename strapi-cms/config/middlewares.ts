@@ -21,6 +21,7 @@ export default [
         'http://localhost:5173',
         'http://localhost:3000',
         'https://boco-strapi-cms.onrender.com',
+        'https://boco-esycommerce.onrender.com', // Added production frontend
         'https://your-frontend-app.vercel.app'
       ],
       headers: ['*'],
