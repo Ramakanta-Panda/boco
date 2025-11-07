@@ -21,8 +21,8 @@ import carousel8 from "./assets/CarouselImg8.png";
 import cardimg1 from "./assets/Card1.png"
 import cardimg2 from "./assets/Card2.png"
 import cardimg3 from "./assets/Card3.png"
-import FashionImg from "./assets/Case study1.png"
-import HealthImg from "./assets/Case study2.png"
+import FashionImg from "./assets/Case-study1.png"
+import HealthImg from "./assets/Case-study2.png"
 
 export const menuItems = [
     {
