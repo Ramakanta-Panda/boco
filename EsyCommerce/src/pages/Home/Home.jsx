@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./Home.module.css";
 import heroImg from "../../assets/Hero.png";
-import heroMob from "../../assets/HeroMob.png"
+import heroMob from "../../assets/heroMob.png"
 import AuditButton from '../../components/UI/AuditBtn/AuditBtn';
 import TalkButton from '../../components/UI/TalkBtn/TalkBtn';
 import { FaStar } from "react-icons/fa";
